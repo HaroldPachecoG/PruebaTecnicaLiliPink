@@ -1,6 +1,8 @@
 [build]
-builder = "nixpacks"
-build_command = "dotnet publish -c Release -o /out"
+builder = "dockerfile"
+dockerfilePath = "./PruebaTecnica.API/Dockerfile"
 
 [deploy]
-start_command = "dotnet /out/TuProyecto.dll"
+startCommand = "./PruebaTecnica.API"
+restartPolicyType = "always"
+healthcheckPath = "/health"
