@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnica.API", "PruebaTecnica.API\PruebaTecnica.API.csproj", "{EDB2A746-7006-46E5-AFF9-334F06786CFA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnica.Logica", "PruebaTecnica.Logica\PruebaTecnica.Logica.csproj", "{2EA0F87C-8BE6-4A32-B62F-84B1B0B4D054}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnica.Data", "PruebaTecnica.Data\PruebaTecnica.Data.csproj", "{798C01B8-0E88-4AFA-AFC9-FF1B8A20F1D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{41C49039-8737-4F0F-B0DC-CADD9C533371}"
+	ProjectSection(SolutionItems) = preProject
+		Railway.toml = Railway.toml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

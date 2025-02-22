@@ -1,0 +1,6 @@
+[build]
+builder = "nixpacks"
+build_command = "dotnet publish -c Release -o /out"
+
+[deploy]
+start_command = "dotnet /out/TuProyecto.dll"
