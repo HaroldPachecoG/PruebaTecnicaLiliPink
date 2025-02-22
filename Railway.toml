@@ -1,0 +1,8 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "./PruebaTecnica.API/Dockerfile"
+
+[deploy]
+startCommand = "./PruebaTecnica.API"
+restartPolicyType = "always"
+healthcheckPath = "/health"
