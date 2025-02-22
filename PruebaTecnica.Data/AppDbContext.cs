@@ -6,18 +6,21 @@ namespace PruebaTecnica.Data
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<Busqueda> Busquedas { get; set; }
         private readonly IConfiguration _configuration;
 
-        public AppDbContext(IConfiguration configuration)
+        public AppDbContext(DbContextOptions<AppDbContext> options, IConfiguration configuration) : base(options)
         {
             _configuration = configuration;
         }
+        public DbSet<Busqueda> Busquedas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            var connectionString = _configuration.GetConnectionString("DefaultConnection");
-            options.UseSqlServer(connectionString);
+            if (!options.IsConfigured)
+            {
+                var connectionString = _configuration.GetConnectionString("DefaultConnection");
+                options.UseNpgsql(connectionString); // 🔹 Cambia a PostgreSQL
+            }
         }
     }
 }
